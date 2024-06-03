@@ -77,9 +77,9 @@ QEMU_CMD="${QEMU_EXEC} -accel kvm \
           -name process=tdxvm,debug-threads=on \
           -m $MEM -vga none \
           -monitor pty \
-          -no-hpet -nodefaults"
+          -nodefaults"
 PARAM_CPU=" -cpu host,-kvm-steal-time,pmu=off"
-PARAM_MACHINE=" -machine q35"
+PARAM_MACHINE=" -machine q35,hpet=off"
 
 usage() {
     cat << EOM
